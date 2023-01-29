@@ -15,18 +15,22 @@ jobs:
       - run: npm ci
       - run: npm run build --workspaces --if-present
       - name: publish field-kit-utils
+        continue-on-error: true
         run: npm publish -w @wotnak/field-kit-utils
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: publish field-kit
+        continue-on-error: true
         run: npm publish -w @wotnak/field-kit
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: publish field-scripts
+        continue-on-error: true
         run: npm publish -w @wotnak/field-scripts
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: publish farm-ui
+        continue-on-error: true
         run: npm publish -w @wotnak/farm-ui
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

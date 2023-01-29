@@ -4,7 +4,6 @@
   "description": "A modular, offline-first companion app to farmOS.",
   "author": "Jamie Gaehring <gaehj457@gmail.com> (https://jgaehring.com)",
   "license": "GPL-3.0-or-later",
-  "private": true,
   "main": "main.js",
   "scripts": {
     "start": "npm run dev",
