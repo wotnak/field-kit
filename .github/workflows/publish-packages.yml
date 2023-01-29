@@ -14,6 +14,6 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
       - run: npm ci
       - run: npm run build --workspaces --if-present
-      - run: npm publish --workspaces
+      - run: npm publish -w @wotnak/field-kit-utils -w @wotnak/field-kit -w @wotnak/field-scripts -w @wotnak/farm-ui
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
