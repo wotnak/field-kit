@@ -1,5 +1,5 @@
 <script>
-import { validateAction } from 'farm-ui/src/components/FarmAppBar.vue';
+import { validateAction } from '@wotnak/farm-ui/src/components/FarmAppBar.vue';
 import {
   setNav, setTitle, setActions, reset,
 } from './AppBar.vue';

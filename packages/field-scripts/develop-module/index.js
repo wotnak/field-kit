@@ -4,8 +4,8 @@ import { createServer } from 'vite';
 import createVuePlugin from '@vitejs/plugin-vue';
 import envCompatible from 'vite-plugin-env-compatible';
 import { viteCommonjs } from '@originjs/vite-plugin-commonjs';
-import { FM_API_ENDPOINT, FM_SCRIPT_DIR } from 'field-kit-utils/constants.js';
-import { snake } from 'field-kit-utils/string-case.js';
+import { FM_API_ENDPOINT, FM_SCRIPT_DIR } from '@wotnak/field-kit-utils/constants.js';
+import { snake } from '@wotnak/field-kit-utils/string-case.js';
 import createMockServer from './mock-server.js';
 
 const require = createRequire(import.meta.url);
@@ -33,7 +33,7 @@ export default async function develop(options = {}) {
   const mockServer = createMockServer(config);
   mockServer.listen(mockPort, 'localhost');
 
-  const fieldKitEntry = require.resolve('field-kit');
+  const fieldKitEntry = require.resolve('@wotnak/field-kit');
   const root = path.dirname(fieldKitEntry);
 
   const devServer = await createServer({

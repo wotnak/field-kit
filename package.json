@@ -1,15 +1,15 @@
 {
-  "name": "field-kit",
+  "name": "@wotnak/field-kit",
   "version": "2.0.0-alpha.8",
   "description": "A modular, offline-first companion app to farmOS.",
   "author": "farmOS team",
   "license": "GPLv3",
   "private": true,
   "scripts": {
-    "build": "npm run build --workspace=field-kit",
+    "build": "npm run build --workspace=@wotnak/field-kit",
     "clean": "npx -y rimraf node_modules **/node_modules/ package-lock.json && npm i",
-    "dev:field-kit": "npm run start --workspace=field-kit",
-    "dev:field-module-tasks": "npm run start --workspace=field-kit",
+    "dev:field-kit": "npm run start --workspace=@wotnak/field-kit",
+    "dev:field-module-tasks": "npm run start --workspace=@wotnak/field-kit",
     "start": "npm run dev:field-kit",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
